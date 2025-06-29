@@ -1,10 +1,10 @@
+package Question1;
 public class redactcw {
   public static void main(String[] args) {
-    redactcw redactcwi = new redactcw();
     String arg1 = "The quick brown fox jumps over the lazy dog!";
     String[] arg2 = { "Fox", "jumps", "dog" };
-    String resString = redactcwi.redact(arg1, arg2);
-
+    String resString = redactcw.redact(arg1, arg2);
+    System.out.println(" resString : " + resString);
   }
 
   public static String redact(String content, String[] redactWords) {
@@ -25,9 +25,7 @@ public class redactcw {
             redactedString = redactedString + "*";
             //System.out.println(" exiting strLen : " + strLen + " redactedString :: " + redactedString);
           }
-        } //else {
-          //redactedString = contentSubString.trim();
-        //}
+        }
       }
       //System.out.println(" exiting redactedString in i loop :: " + redactedString);
       if (retVal.equals("")) {

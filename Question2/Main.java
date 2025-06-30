@@ -29,13 +29,13 @@ class Main {
 
     custSort.setValues(inValues);
 
-    custSort.getGaps();
+    //custSort.getGaps();
 
-    custSort.add(null);
+    //custSort.add(null);
 
-    custSort.remove(0);
+    //custSort.remove(0);
 
-    custSort.sort();
+    //custSort.sort();
 
   } 
 }

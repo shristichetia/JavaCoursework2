@@ -18,6 +18,7 @@ class Main {
     
     inValues.add(1.38);
     inValues.add(1.0);
+    inValues.add(0.0);
     inValues.add(4.0);
     inValues.add(7.0);
     inValues.add(10.0);
@@ -28,12 +29,14 @@ class Main {
   
 
     custSort.setValues(inValues);
-
+    custSort.add(2.5);
+    custSort.remove(4);
+    custSort.add(19.0);
     //custSort.getGaps();
 
-    //custSort.add(null);
+    //
 
-    //custSort.remove(0);
+    
 
     //custSort.sort();
 

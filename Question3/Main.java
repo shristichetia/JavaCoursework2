@@ -11,7 +11,11 @@ public static void main(String[] args) {
     // method in SRPN.java 
     VigenereCipher vc = new VigenereCipher();
     //vc.setVigenereTable();
-    vc.encrypt("encrypt_check.txt","key_check");
+    //vc.generateKey("GEEKSFORGEEKS","SHRISTI");
+    //vc.encrypt("encrypt_check.txt","key_check.txt");
+    vc.readFile("encrypt_check.txt");
+
+    //vc.decrypt("encrypt_check.txt","key_check");
 
     /*BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         

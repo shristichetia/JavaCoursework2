@@ -10,8 +10,10 @@ public static void main(String[] args) {
     // This input is passed to the processCommand
     // method in SRPN.java 
     VigenereCipher vc = new VigenereCipher();
+    //vc.setVigenereTable();
+    vc.encrypt("encrypt_check.txt","key_check");
 
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+    /*BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         
     try {
       //Keep on accepting input from the command-line
@@ -29,6 +31,6 @@ public static void main(String[] args) {
     catch(IOException e) {
       System.err.println(e.getMessage());
       System.exit(1);
-    }
+    }*/
   } 
 }

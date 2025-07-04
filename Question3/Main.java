@@ -12,10 +12,10 @@ public static void main(String[] args) {
     VigenereCipher vc = new VigenereCipher();
     //vc.setVigenereTable();
     //vc.generateKey("GEEKSFORGEEKS","SHRISTI");
-    //vc.encrypt("encrypt_check.txt","key_check.txt");
-    vc.readFile("encrypt_check.txt");
+    vc.encrypt("encrypt_check.txt","key_check.txt");
+    //vc.readFile("encrypt_check.txt");
 
-    //vc.decrypt("encrypt_check.txt","key_check");
+    vc.decrypt("decrypt_check.txt","key_check.txt");
 
     /*BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         

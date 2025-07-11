@@ -1,31 +1,37 @@
 package Question4;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        String[] arrList1 = { "2003-08-27.txt", "1831-06-01.txt" };
-        String[] arrList2 = { "1961-04-12.txt", "1972-12-11.txt" };
+        ArrayList<String> filesOne = new ArrayList<String>();
+        filesOne.add("1831-06-01.txt");
+        filesOne.add("2003-08-27.txt");
 
-        ArrayList<String[]> arrLists = new ArrayList<String[]>();
+        ArrayList<String> filesTwo = new ArrayList<String>();
+        filesTwo.add("1961-04-12.txt");
+        filesTwo.add("1972-12-11.txt");
 
-        arrLists.add(arrList1);
-        arrLists.add(arrList2);
+        int numAttempts = 3;
 
-        // PopThread pt1 = new PopThread(arrList1);
- 
-        ExecutorService executor = Executors.newFixedThreadPool(2);
-
-        for (int i = 0; i < arrLists.size(); i++) {
-            PopThread pt = new PopThread(arrLists.get(i));
-            executor.execute(pt);
+        for (int i = 0; i < numAttempts; i++) {
+            System.out.println("Run: " + (i + 1));
+            PopThread popRunnableOne = new PopThread(filesOne);
+            PopThread popRunnableTwo = new PopThread(filesTwo);
+            Thread threadOne = new Thread(popRunnableOne);
+            Thread threadTwo = new Thread(popRunnableTwo);
+            threadOne.start();
+            threadTwo.start();
+            try {
+                threadOne.join();
+                threadTwo.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            //printContents("result.txt");
         }
-
     }
 
 }
